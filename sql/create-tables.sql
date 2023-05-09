@@ -1,0 +1,192 @@
+DROP TABLE IF EXISTS PHOTO CASCADE;
+DROP TABLE IF EXISTS ROLE_CREW CASCADE;
+DROP TABLE IF EXISTS PROJECT_ROLE CASCADE;
+DROP TABLE IF EXISTS SERVER_ROLE CASCADE;
+DROP TABLE IF EXISTS ENROLMENT CASCADE;
+DROP TABLE IF EXISTS EVENT CASCADE;
+DROP TABLE IF EXISTS PRODUCTION_MANAGER CASCADE;
+DROP TABLE IF EXISTS ANNOUNCEMENT CASCADE;
+DROP TABLE IF EXISTS CREW_MEMBER CASCADE;
+DROP TABLE IF EXISTS CLIENT CASCADE;
+DROP TABLE IF EXISTS PERSON CASCADE;
+DROP TABLE IF EXISTS WEB_SESSION CASCADE;
+DROP TABLE IF EXISTS AVAILABILITY CASCADE;
+DROP TABLE IF EXISTS USER_ROLE CASCADE;
+DROP TABLE IF EXISTS DEPARTMENT CASCADE;
+DROP TABLE IF EXISTS EVENT_TYPE CASCADE;
+DROP TABLE IF EXISTS BOOKING CASCADE;
+DROP TABLE IF EXISTS EVENT_STATUS CASCADE;
+DROP TABLE IF EXISTS STATUS_PERMISSION CASCADE;
+DROP TABLE IF EXISTS URGENCY CASCADE;
+
+CREATE TABLE EVENT_STATUS
+(
+    status_type VARCHAR(100) NOT NULL UNIQUE,
+    PRIMARY KEY (status_type)
+);
+
+CREATE TABLE URGENCY
+(
+    urgency_type VARCHAR(100) NOT NULL UNIQUE,
+    PRIMARY KEY (urgency_type)
+);
+
+CREATE TABLE STATUS_PERMISSION
+(
+    status_type VARCHAR(100) NOT NULL UNIQUE,
+    PRIMARY KEY (status_type)
+);
+
+CREATE TABLE BOOKING
+(
+    booking_type VARCHAR(100) NOT NULL UNIQUE,
+    PRIMARY KEY (booking_type)
+);
+
+CREATE TABLE EVENT_TYPE
+(
+    event_type VARCHAR(100) NOT NULL UNIQUE,
+    PRIMARY KEY (event_type)
+);
+
+CREATE TABLE DEPARTMENT
+(
+    department_type VARCHAR(100) NOT NULL UNIQUE,
+    PRIMARY KEY (department_type)
+);
+
+CREATE TABLE PROJECT_ROLE
+(
+    project_role_type VARCHAR(100) NOT NULL UNIQUE,
+    PRIMARY KEY (project_role_type)
+);
+
+CREATE TABLE AVAILABILITY
+(
+    availability_type VARCHAR(100) NOT NULL UNIQUE,
+    PRIMARY KEY (availability_type)
+);
+
+CREATE TABLE SERVER_ROLE
+(
+    server_role_type VARCHAR(100) NOT NULL UNIQUE,
+    PRIMARY KEY (server_role_type)
+);
+
+CREATE TABLE PERSON
+(
+    id            SERIAL       NOT NULL UNIQUE,
+    email         VARCHAR(100),
+    fullname      VARCHAR(100) NOT NULL,
+    phone_no      VARCHAR(100),
+    password_hash VARCHAR(100),
+    server_role   VARCHAR(100) DEFAULT ('CLIENT'),
+    FOREIGN KEY (server_role) REFERENCES SERVER_ROLE (server_role_type),
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE WEB_SESSION
+(
+--  id = session name ('name' is reserved)
+    id          VARCHAR(100) PRIMARY KEY,
+    expiry_date TIMESTAMPTZ NOT NULL,
+    person_id   INTEGER     NOT NULL,
+    FOREIGN KEY (person_id) REFERENCES PERSON (id) ON DELETE CASCADE
+);
+
+CREATE TABLE CLIENT
+(
+    id      INTEGER PRIMARY KEY,
+    company VARCHAR(100),
+    FOREIGN KEY (id) REFERENCES PERSON (id) ON DELETE CASCADE
+);
+
+CREATE TABLE CREW_MEMBER
+(
+    id              INTEGER NOT NULL UNIQUE,
+    availability    VARCHAR(100),
+    department_type VARCHAR(100),
+    PRIMARY KEY (id),
+    FOREIGN KEY (id) REFERENCES PERSON (id),
+    FOREIGN KEY (availability) REFERENCES AVAILABILITY (availability_type),
+    FOREIGN KEY (department_type) REFERENCES DEPARTMENT (department_type)
+);
+
+CREATE TABLE ROLE_CREW
+(
+    id_crew      INTEGER,
+    project_role VARCHAR(100),
+    PRIMARY KEY (id_crew, project_role),
+    FOREIGN KEY (project_role) REFERENCES PROJECT_ROLE (project_role_type),
+    FOREIGN KEY (id_crew) REFERENCES CREW_MEMBER (id) ON DELETE CASCADE
+);
+
+CREATE TABLE PRODUCTION_MANAGER
+(
+    id INTEGER NOT NULL UNIQUE,
+    PRIMARY KEY (id),
+    FOREIGN KEY (id) REFERENCES PERSON (id) ON DELETE CASCADE
+);
+
+CREATE TABLE EVENT
+(
+    id              SERIAL PRIMARY KEY,
+    title           VARCHAR(100) NOT NULL,
+    location        VARCHAR(100),
+    start_date      TIMESTAMPTZ,
+    end_date        TIMESTAMPTZ,
+    duration        INTEGER,
+    notes           VARCHAR(400),
+    product_manager INTEGER,
+    client          INTEGER      NOT NULL,
+    booking         VARCHAR(100),
+    status          VARCHAR(100),
+    event_type      VARCHAR(100),
+    department_type VARCHAR(100),
+    FOREIGN KEY (booking) REFERENCES BOOKING (booking_type),
+    FOREIGN KEY (status) REFERENCES EVENT_STATUS (status_type),
+    FOREIGN KEY (event_type) REFERENCES EVENT_TYPE (event_type),
+    FOREIGN KEY (department_type) REFERENCES DEPARTMENT (department_type),
+    FOREIGN KEY (product_manager) REFERENCES PERSON (id) ON DELETE CASCADE
+);
+
+CREATE TABLE ENROLMENT
+(
+    duration          INTEGER,
+    counter_kaakjes   INTEGER,
+    project_role      VARCHAR(100),
+    status_permission VARCHAR(100),
+    crewMember        INTEGER,
+    event             INTEGER,
+    PRIMARY KEY (crewMember, event),
+    FOREIGN KEY (event) REFERENCES EVENT (id) ON DELETE CASCADE,
+    FOREIGN KEY (crewMember) REFERENCES CREW_MEMBER (id) ON DELETE CASCADE,
+    FOREIGN KEY (project_role) REFERENCES PROJECT_ROLE (project_role_type),
+    FOREIGN KEY (status_permission) REFERENCES STATUS_PERMISSION (status_type)
+);
+
+CREATE TABLE ANNOUNCEMENT
+(
+    id         SERIAL PRIMARY KEY,
+    title      VARCHAR(100),
+    body       VARCHAR,
+    timestamp  TIMESTAMPTZ,
+    urgency    VARCHAR(100),
+    department VARCHAR(100),
+    receive    INTEGER,
+    sender     INTEGER NOT NULL,
+    FOREIGN KEY (sender) REFERENCES PERSON (id) ON DELETE CASCADE,
+    FOREIGN KEY (receive) REFERENCES CREW_MEMBER (id),
+    FOREIGN KEY (urgency) REFERENCES URGENCY (urgency_type),
+    FOREIGN KEY (department) REFERENCES DEPARTMENT (department_type)
+);
+
+CREATE TABLE PHOTO
+(
+    id         SERIAL PRIMARY KEY,
+    event      INTEGER NOT NULL,
+    crewMember INTEGER NOT NULL,
+    photo      bytea,
+    moment     TIMESTAMPTZ DEFAULT current_timestamp,
+    FOREIGN KEY (event, crewMember) REFERENCES ENROLMENT (event, crewMember) ON DELETE CASCADE
+);

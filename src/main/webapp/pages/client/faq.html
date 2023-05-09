@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="/styles/faq.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/scripts/profile.js"></script>
+    <title>FAQ</title>
+</head>
+
+<body>
+<header>
+
+    <!-- nav bar -->
+    <ul class="nav">
+        <li onclick="location.href='/'">Home</li>
+        <li onclick="location.href='/contacts'">Contacts</li>
+        <li onclick="location.href='/faq'">FAQ</li>
+    </ul>
+
+    <!-- company logo -->
+    <div class="logo" onclick="location.replace('/')">
+        <img src="/images/logo.png" alt="logo">
+        <p>shot<span style="color: #4A3AFF;">maniacs</span></p>
+    </div>
+
+    <!-- login button -->
+    <button type="button" class="btn login-btn" onclick="location.assign('/login')">Login</button>
+
+    <!-- profile overview -->
+    <div class="profile" onclick="location.assign('/profile')">
+        <img src="/images/penguin.png" alt="profile photo">
+        <div class="profile-details">
+            <h4 id="fullname">John Smith (CREW)</h4>
+            <p id="email">john.smith@gmail.com</p>
+        </div>
+    </div>
+
+</header>
+
+<div class="text-wrapper">
+    <div class="questions1">Here we have put together some commonly asked questions that might give you an insight about us and what we offer.
+    <br> If you can't find the answer to your question don't hesitate to
+        <p onclick="location.href='/contacts'" style="color: #4A3AFF; display: inline; font-family: 'DM Sans', serif; font-weight: bold; font-size: 25px">contact us</p>.
+    </div>
+    <div class="questions">
+        1. How do your services work? <br>
+        <div class="answer">When making a booking, with or without account, you will have to wait for a <br>
+        confirmation that your event was accepted. This confirmation is sent on the e-mail that your provided <br>
+        or shown on your profile.</div>
+        <br><br>
+        2. Can I make a booking without an account? <br>
+        <div class="answer">Of course! The booking can be made on the <p onclick="location.href='/'" style="color: #4A3AFF; display: inline; font-family: 'DM Sans', serif; font-weight: bold; font-size: 20px">main page</p>.</div>
+        <br><br>
+        3. Can I modify my booking without an account?<br>
+        <div class="answer">Yes, your booking can be modified and then the changes need to be accepted by our team.</div>
+        <br><br>
+        4. What kind of services do you provide?<br>
+        <div class="answer">We provide photography, videography, marketing and other services for any kind of events.</div>
+        <br><br>
+        5. Can I book multiple events at once?<br>
+        <div class="answer">Yes! And to make things easier you can upload an Excel file with all your bookings and the needed details and we take care of the rest.</div>
+
+    </div>
+</div>
+
+<footer>
+
+    <div class="footer-row">
+
+        <!-- additional -->
+        <div>
+            <h4>Additional</h4>
+            <ul>
+                <li><a href="/privacy">Privacy policy</a></li>
+                <li><a href="/tos">Terms of Use</a></li>
+            </ul>
+        </div>
+
+        <!-- contact us -->
+        <div>
+            <h4>Contact us</h4>
+            <ul>
+                <li><a href="tel:0645678763">Phone: <span style="color: blue; opacity: 100%;">
+                                &emsp;&emsp;0645678763</span></a></li>
+                <li><a href="mailto:hi@shotmaniacs.com">Mail: <span style="color: blue; opacity: 100%;">
+                                &emsp;&emsp;&emsp;hi@shotmaniacs.com</span></a></li>
+            </ul>
+        </div>
+
+        <!-- social media -->
+        <div>
+            <h4>Social media</h4>
+            <ul class="social-media-list">
+                <li><a href="https://www.facebook.com/Shotmaniacs/">
+                    <img src="/images/Socials/FB.svg" alt="Facebook" title="Facebook"></a></li>
+                <li><a href="https://www.instagram.com/Shotmaniacs/">
+                    <img src="/images/Socials/Insta.svg" alt="Instagram" title="Instagram"></a></li>
+            </ul>
+        </div>
+
+    </div>
+    <hr>
+    <p class="copyright">© 2022 Shotmaniacs | All Rights Reserved</p>
+
+</footer>
+</body>
+</html>

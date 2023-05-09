@@ -1,0 +1,161 @@
+body {
+    overflow-y: hidden;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 20px;
+}
+
+.event-board {
+    background-color: white;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 12.4rem;
+    height: auto;
+    box-shadow: var(--big-shadow);
+    overflow-y: scroll;
+    padding: 4rem;
+    width: 55rem;
+}
+
+.board-header {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 3rem;
+    gap: 1rem;
+}
+
+.add-event-btn {
+    background-color: white;
+    background: url("/images/plus.svg") no-repeat center;
+    background-size: 2rem 2rem;
+    box-shadow: 0 0 6px #ddd;
+    border: 1px solid #EFF0F7;
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+}
+
+.events {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: white;
+}
+
+.cardEvent {
+    display: flex;
+    flex-direction: column;
+    border-left: 2rem solid #FF7FA5;
+    box-shadow: 5px 5px 16px 0px #080F341F;
+    cursor: pointer;
+    padding: 1.5rem;
+    border-radius: 2rem;
+
+    -webkit-transition: border 0.5s ease;
+    -moz-transition: border 0.5s ease;
+    -o-transition: border 0.5s ease;
+    -ms-transition: border 0.5s ease;
+    transition: border 0.5s ease;
+}
+
+.cardEvent:hover {
+    border-left-width: 1rem;
+}
+
+.cardEvent h2 {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+
+.cardEvent p {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.penguins {
+    display: flex;
+    justify-content: end;
+    padding-top: 3rem;
+    margin-top: auto;
+    gap: 0.5rem;
+}
+
+.penguins img {
+    width: 3rem;
+    height: 3rem;
+}
+
+/* ===================================
+*                CALENDER
+*  =================================== */
+
+#calendar {
+    margin: 4rem 4rem 1rem 4rem;
+    padding: 6rem;
+    height: 74vh;
+    margin-right: 59rem;
+    background-color: white;
+    border-radius: 4rem;
+    box-shadow: var(--big-shadow);
+}
+
+#calendar button {
+    background-color: var(--second-color);
+    border: 1px solid white;
+}
+
+#calendar a {
+    text-decoration: none;
+    color: black;
+}
+
+.calendarPanel {
+    align-self: start;
+}
+
+.fc-day {
+    background-color: white;
+}
+
+.fc-daygrid-event-dot,
+.fc-event-time {
+    display: none;
+}
+
+.fc-event-title,
+.fc-event-title-container {
+    padding: 0.2rem 1rem;
+    margin: 0 1rem;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.fc-daygrid-event:hover {
+    background-color: transparent;
+}
+
+.fc-day-today div {
+    background: #eee;
+}
+
+/* ===================================
+*                LEGEND
+*  =================================== */
+
+.legend {
+    padding-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 55rem;
+}
+
+.imageLegend {
+    height: 15px;
+    width: 15px;
+}

@@ -1,0 +1,13 @@
+com.shotmaniacs
+com.shotmaniacs.config
+com.shotmaniacs.dao
+com.shotmaniacs.daotest
+com.shotmaniacs.models
+com.shotmaniacs.models.dto
+com.shotmaniacs.models.event
+com.shotmaniacs.models.user
+com.shotmaniacs.rest
+com.shotmaniacs.rest.exceptions
+com.shotmaniacs.rest.resources
+com.shotmaniacs.rest.security
+com.shotmaniacs.utils

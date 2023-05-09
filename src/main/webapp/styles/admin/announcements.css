@@ -1,0 +1,152 @@
+/* ===================================
+*              GLOBAL
+*  =================================== */
+
+input, textarea {
+    box-shadow: var(--small-shadow);
+    border: var(--small-border);
+    border-radius: 2rem;
+    text-align: start;
+    padding: 2.2rem 4rem;
+    width: 100%;
+}
+
+label {
+    width: 100%;
+}
+
+button {
+    color: #fff;
+    font-weight: bold;
+    border-style: none;
+    border-radius: 1rem;
+}
+
+h3 {
+    color: #aaa;
+    font-size: 1.6rem;
+    font-weight: 100;
+    line-height: 3rem;
+}
+
+/* ===================================
+*           ANNOUNCEMENT PANEL
+*  =================================== */
+
+.add-ann {
+    align-self: center;
+    font-size: 1.8rem;
+    margin-top: 3rem;
+}
+
+.ann {
+    display: flex;
+    margin: 3rem 15%;
+    padding: 4rem 6rem 6rem 6rem;
+    gap: 6rem;
+}
+
+.ann label, h2{
+    font-weight: bold;
+    font-size: 2.2rem;
+    margin-bottom: 1em;
+}
+
+.ann-line-1 {
+    width: 100%;
+    align-items: flex-end;
+    gap: 3rem;
+}
+
+.ann-urgencies {
+    display: flex;
+    gap: 2rem;
+}
+
+.ann-urgency {
+    border-radius: 50%;
+    padding: 1.7rem 1.2rem;
+    box-shadow: var(--small-shadow);
+    border: var(--small-border);
+    width: 6.8rem;
+}
+
+.ann-options {
+    align-items: flex-start;
+    margin-top: 1rem;
+    height: 100%;
+}
+
+.ann textarea {
+    min-height: 12rem;
+}
+
+/* option buttons */
+.ann-buttons {
+    margin: auto 0 1rem 0;
+    gap: 2rem;
+}
+
+.ann button {
+    padding: 1.4rem 0;
+    width: 14rem;
+}
+
+.cancel-btn {
+    background-color: var(--red-btn);
+}
+
+/* dropdown menu */
+
+.drop-btn {
+    display: flex;
+    align-items: center;
+    color: black;
+    font-weight: 500;
+    gap: 1rem;
+    padding: 1.5rem 2.5rem;
+}
+
+.drop-btn img {
+    border-radius: 50%;
+    height: 3.5rem;
+    width: 3.5rem;
+}
+
+.dropdown-content {
+    position: absolute;
+    display: none;
+    min-width: 23rem;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 1.2rem 2rem;
+    font-size: 1.4rem;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #f1f1f1;
+}
+
+@media screen and (max-width: 80rem) {
+    .ann {
+        flex-direction: column;
+    }
+
+    .ann-buttons {
+        margin-top: 6rem;
+    }
+}

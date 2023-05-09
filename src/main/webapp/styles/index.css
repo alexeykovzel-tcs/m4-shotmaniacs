@@ -1,0 +1,237 @@
+/**
+    =================================
+                 GLOBAL
+    =================================
+ */
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a { 
+    text-decoration: none;
+    color: #6F6C90;
+}
+
+p {
+    font-size: 2rem;
+}
+
+html {
+    overflow-x: hidden;
+}
+/**
+    =================================
+               COMPONENTS
+    =================================
+ */
+
+/* popup corrections */
+.event-data {
+    gap: 12rem;
+}
+
+.booking-popup {
+    width: 55%;
+    padding: 4rem 10rem;
+    gap: 4rem;
+}
+
+.booking-popup input, textarea, .selected {
+    padding: 2rem 3rem !important;
+}
+
+input[type=time] {
+    width: 22rem;
+}
+
+/* layout components */
+.strape {
+    display: flex;
+    margin-bottom: 15rem;
+    gap: 6rem;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 70rem;
+    max-width: 70rem;
+}
+
+/* terms of use, FAQ, Contacts, etc. */
+.text-wrapper {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    padding: 4rem 6vw;
+    gap: 1.2rem;
+}
+
+.text-wrapper a {
+    color: var(--second-color);
+    font-weight: bold;
+}
+
+.text-wrapper ul {
+    list-style: circle;
+}
+
+.text-wrapper li {
+    padding: 0.5rem 0;
+}
+
+.text-wrapper h3 {
+    font-size: 3rem;
+    padding: 3.5rem 0;
+}
+
+.text-wrapper p {
+    font-size: 1.6rem;
+    font-weight: 100;
+    padding: 1rem 0;
+}
+
+/**
+    =================================
+              PAGE ELEMENTS
+    =================================
+ */
+
+/* booking introduction + button */
+
+.booking {
+    padding: 10rem;
+    margin-left: auto;
+    gap: 6rem
+}
+
+.booking button {
+    width: 100%;
+    max-width: 45rem;
+    padding: 2rem 0;
+    font-size: 4rem;
+}
+
+/* image grid at the 1-st row of the body */
+
+.img-grid {
+    padding: 8rem 12rem 0 0;
+    margin-right: auto;
+    gap: 4rem;
+}
+
+.img-grid img {
+    border-radius: 4rem;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.img-row-1 img {
+    width: 100%;
+}
+
+.img-row-2 {
+    display: flex;
+    gap: 4rem;
+}
+
+.img-row-2 img {
+    width: 50%;
+}
+
+/* 2-nd row of the body */
+
+.full-photo {
+    margin-left: auto;
+    padding: 0 10rem;
+}
+
+.full-photo img {
+    object-fit: cover;
+    border-radius: 5rem;
+    height: 50rem;
+}
+
+.services {
+    margin-right: auto;
+    padding-right: 20rem;
+    gap: 2rem;
+}
+
+/* portfolio */
+
+.portfolio {
+    max-width: 175rem;
+    padding: 0 10rem;
+    margin: auto auto 50px;
+
+}
+
+.card {
+    flex: 31.5% 0 0;
+}
+
+.cards-wrapper {
+    display: flex;
+    transition: ease 0.5s;
+    gap: 4rem;
+}
+
+.cards-wrapper img {
+    border-radius: 50px;
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.display-area {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin: auto;
+}
+
+.dots-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 5rem auto;
+}
+
+.dot {
+    border: none;
+    background: rgba(0, 0, 0, 0.2);
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    border-radius: 50%;
+    outline: none;
+}
+
+.dot:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.dot.active {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 100rem) {
+    .strape {
+        flex-direction: column;
+    }
+
+    .strape * {
+        margin: auto;
+        padding: 0;
+    }
+
+    .booking {
+        padding-top: 10rem;
+    }
+
+    .full-photo {
+        padding: 10rem;
+    }
+}

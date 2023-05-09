@@ -1,0 +1,315 @@
+/* crew member overview */
+.member {
+    display: flex;
+    box-shadow: var(--big-shadow);
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: white;
+    border-radius: 3rem;
+    margin: 3rem 12% 0 12%;
+    padding: 3rem 0;
+    gap: 3%;
+}
+
+.member p {
+    font-size: 1.8rem;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    height: 8rem;
+    width: 8rem;
+    margin-left: 4rem;
+    object-fit: fill;
+    flex: 5% 5% 0;
+}
+
+.profile-name {
+    font-weight: bold;
+    margin-left: -2%;
+    width: 12rem;
+    color: black;
+}
+
+/* dropdown menu */
+.dropdown-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* selected item in a dropdown menu */
+.select-box {
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    width: 24rem;
+}
+
+.select-box label {
+    padding: 1.2rem 2.4rem;
+    cursor: pointer;
+}
+
+.selected {
+    background-color: white;
+    border-radius: 1.5rem;
+    box-shadow: var(--small-shadow);
+    border: var(--small-border);
+    color: #f5f6fa;
+    position: relative;
+    order: 0;
+}
+
+.selected::after {
+    content: "";
+    background: url("/images/arrow-down.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    transition: all 0.4s;
+    height: 100%;
+    width: 3.2rem;
+    right: 1rem;
+    top: 0.5rem;
+}
+
+.selected {
+    padding: 0.8rem 2.4rem;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: #000000;
+}
+
+/* dropdown options */
+.options-wrapper {
+    position: absolute;
+    z-index: 1;
+    margin-top: 5.2rem;
+    background-color: white;
+    box-shadow: var(--big-shadow);
+    width: 24rem;
+    max-height: 0;
+    transition: all 0.4s;
+    font-size: 1.8rem;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    order: 1;
+}
+
+.options-wrapper.active {
+    padding: 1rem 0;
+    max-height: 12rem;
+    opacity: 1;
+    overflow-y: scroll;
+}
+
+.options-wrapper.active+.selected::after {
+    opacity: 0;
+}
+
+.options-wrapper::-webkit-scrollbar {
+    width: 0.8rem;
+    border-radius: 0 0.8rem 0.8rem 0;
+}
+
+.options-wrapper::-webkit-scrollbar-thumb {
+    background: #bbb;
+    border-radius: 0 0.8rem 0.8rem 0;
+}
+
+.option:hover {
+    background: #eee;
+}
+
+.radio {
+    display: none;
+}
+
+/* dropdown options for roles */
+.roles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.roles-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.plus-btn {
+    background: url("/images/plus.svg") no-repeat center;
+    background-size: 3rem 3rem;
+    box-shadow: var(--small-shadow);
+    border: var(--small-border);
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+}
+
+/* remove button */
+.btn {
+    font-size: 1.8rem;
+    padding: 1.2rem 3rem;
+    margin: 0 4rem 0 auto;
+}
+
+@media screen and (max-width: 110rem) {
+    .btn {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 62rem) {
+    .member {
+        flex-direction: column;
+        align-self: center;
+        width: 40rem;
+        gap: 3rem;
+    }
+
+    .member * {
+        flex-direction: column;
+        margin: 0 !important;
+    }
+
+    .profile-name {
+        width: auto;
+    }
+}
+
+
+
+/* Confirmation window */
+
+.confirm {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    box-sizing: border-box;
+
+    opacity: 0;
+    animation-name: confirm---open;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.confirm__window {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    font-size: 14px;
+    font-family: 'Noto Sans', sans-serif;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+    opacity: 0;
+    transform: scale(0.75);
+    animation-name: confirm__window---open;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.2s;
+}
+
+.confirm--close {
+    animation-name: confirm---close;
+}
+
+.confirm__titlebar,
+.confirm__content,
+.confirm__buttons {
+    padding: 1.25em;
+}
+
+.confirm__titlebar {
+    background: #222222;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.confirm__title {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.confirm__close {
+    background: none;
+    outline: none;
+    border: none;
+    transform: scale(2.5);
+    color: #ffffff;
+    transition: color 0.15s;
+}
+
+.confirm__close:hover {
+    color: #ff0000;
+    cursor: pointer;
+}
+
+.confirm__content {
+    line-height: 1.8em;
+}
+
+.confirm__buttons {
+    background: #eeeeee;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.confirm__button {
+    padding: 0.4em 0.8em;
+    border: 2px solid #EB3323;
+    border-radius: 5px;
+    background: #ffffff;
+    color: #EB3323;
+    font-weight: bold;
+    font-size: 1.1em;
+    font-family: 'Noto Sans', sans-serif;
+    margin-left: 0.6em;
+    cursor: pointer;
+    outline: none;
+}
+
+.confirm__button--fill {
+    background: #EB3323;
+    color: #ffffff;
+}
+
+.confirm__button:focus {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes confirm---open {
+    from { opacity: 0 }
+    to { opacity: 1 }
+}
+
+@keyframes confirm---close {
+    from { opacity: 1 }
+    to { opacity: 0 }
+}
+
+@keyframes confirm__window---open {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

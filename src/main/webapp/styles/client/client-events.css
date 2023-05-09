@@ -1,0 +1,221 @@
+/*.logo {*/
+/*    margin: 0 auto;*/
+/*    width: 4rem;*/
+/*    text-align:left;*/
+/*}*/
+
+/*.logoHolder {*/
+/*    padding-top: 5px;*/
+/*    margin: 0 auto;*/
+/*    display: inline-flex;*/
+/*    text-align: center;*/
+
+/*}*/
+/**{*/
+/*    font-family: 'DM Sans', sans-serif;*/
+/*    font-size: 17px;*/
+/*    box-sizing: border-box;*/
+/*}*/
+
+/*.add-event-btn {*/
+/*    background-color: white;*/
+/*    background: url("/images/plus.svg") no-repeat center;*/
+/*    background-size: 2rem 2rem;*/
+/*    box-shadow: 0 0 6px #ddd;*/
+/*    border: 1px solid #EFF0F7;*/
+/*    border-radius: 50%;*/
+/*    height: 3rem;*/
+/*    width: 3rem;*/
+/*}*/
+
+/*.header {*/
+/*    width: 100%;*/
+/*    height: 100px;*/
+/*    display: flex;*/
+/*    margin: 0 auto;*/
+/*    align-items: center;*/
+/*    border-bottom: 1px solid #080F341F;*/
+
+/*}*/
+.back{
+    background: white url("/images/blob-background.png") no-repeat fixed;
+    background-size: cover;
+    height: calc(100vh - 113px);
+}
+/*.company-name-second{*/
+/*    font-family: 'DM Sans', sans-serif;*/
+/*    font-style: normal;*/
+/*    font-size: 40px;*/
+/*    line-height: 62px;*/
+/*}*/
+/*.company-name {*/
+/*    display: inline-block;*/
+/*    margin: auto;*/
+/*    color: black;*/
+/*    font-family: 'DM Sans', sans-serif;*/
+/*    font-style: normal;*/
+/*    font-weight: 700;*/
+/*    font-size: 40px;*/
+/*    line-height: 62px;*/
+/*}*/
+
+
+.eventBox{
+    background: #FFFFFF;
+    padding: 10px;
+    border-radius: 34px;
+    height: 120px;
+    box-shadow: 5px 5px 16px 0px #080F341F;
+
+}
+
+.event{
+    margin-bottom: 20px;
+}
+
+.eventTitle{
+    padding-left: 65px;
+    padding-top: 0px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 62px;
+    color: #170F49;
+    margin-top: -10px;
+}
+
+.hint{
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 62px;
+    color: #170f4999;
+    padding-left: 178px;
+    padding-top: 10px;
+}
+
+
+.eventDescription{
+    padding-left: 65px;
+    font-size: 17px;
+    margin-top: -10px;
+}
+
+.button{
+
+}
+
+.editButton{
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+    color: #4A3AFF;
+    border:none;
+    width: 85px;
+    height: 30px;
+    background: #FFFFFF ;
+    border-radius: 86px;
+    box-shadow: 0px 3px 12px 0px #4A3AFF2E;
+
+}
+
+.cancelButton{
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+    color: #FFFFFF;
+    border:none;
+    width: 90px;
+    height: 30px;
+    background: #FF3A3A ;
+    border-radius: 86px;
+    box-shadow: 0px 3px 12px 0px #4A3AFF2E;
+    margin-left: 15px;
+
+}
+
+.bookingButton{
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+    color: #FFFFFF;
+    border: none;
+    width: 190px;
+    height: 45px;
+    background: #4A3AFF;
+    box-shadow: 0px 8px 22px rgba(74, 58, 255, 0.26);
+    border-radius: 86px;
+    margin-left: 40px;
+}
+
+.buttonPanel{
+    align-content: end;
+}
+
+/*!* ===================================*/
+/**                HEADER*/
+/**  =================================== *!*/
+
+/*header {*/
+/*    flex-direction: column;*/
+/*    min-height: auto;*/
+/*    border: none;*/
+/*    box-shadow: var(--big-shadow);*/
+/*    background: white;*/
+/*}*/
+
+/*.sidebar {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    gap: 6vw;*/
+/*}*/
+
+/*.sidebar a {*/
+/*    float: left;*/
+/*    color: black;*/
+/*    text-decoration: none;*/
+/*    font-weight: bold;*/
+/*    font-size: 1.6rem;*/
+/*    margin: 1.5rem 0;*/
+/*}*/
+
+/*.sidebar a:hover {*/
+/*    background-color: white;*/
+/*    color: var(--second-color);*/
+/*}*/
+
+/*.sidebar a.active {*/
+/*    background-color: white;*/
+/*    color: var(--second-color);*/
+/*}*/
+
+/*.logo {*/
+/*    margin: 0 auto;*/
+/*    height: 6rem;*/
+/*    position: relative;*/
+/*}*/
+
+/*.logo-holder {*/
+/*    display: flex;*/
+/*    padding-top: 1rem;*/
+/*}*/
+
+/*.company-name {*/
+/*    font-weight: bold;*/
+/*    font-size: 4rem;*/
+/*}*/
+
+/*.company-name-second {*/
+/*    color: var(--second-color);*/
+/*}*/

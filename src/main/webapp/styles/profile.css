@@ -1,0 +1,58 @@
+.profile-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8rem 10%;
+    height: 100%;
+    gap: 2rem;
+}
+
+.profile-wrapper p {
+    color: #575F6E;
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 1rem;
+}
+
+label {
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+input[type=text] {
+    display: flex;
+    border: none;
+    box-shadow: var(--big-shadow);
+    border-radius: 5rem;
+    font-size: 1.8rem;
+    padding: 2.2rem 4rem;
+    max-width: 60rem;
+}
+
+.profile-options {
+    display: none;
+    justify-content: end;
+    margin-top: auto;
+    gap: 2.5rem;
+}
+
+.btn {
+    font-size: 2.2rem;
+}
+
+@media screen and (max-width: 80rem) {
+    input[type=text] {
+        max-width: 100%;
+    }
+
+    .profile-options {
+        margin-top: 6rem;
+        justify-content: center;
+    }
+}

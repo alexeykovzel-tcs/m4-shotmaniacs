@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/booking.css">
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js" integrity="sha512-j+F4W//4Pu39at5I8HC8q2l1BNz4OF3ju39HyWeqKQagW6ww3ZF9gFcu8rzUbyTDY7gEo/vqqzGte0UPpo65QQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="/scripts/profile.js"></script>
+    <script src="/scripts/booking.js"></script>
+    <script src="/scripts/index.js"></script>
+    <title>Home</title>
+</head>
+
+<body>
+
+<header>
+
+    <!-- nav bar -->
+    <ul class="nav">
+        <li onclick="location.href='/'">Home</li>
+        <li onclick="location.href='/contacts'">Contacts</li>
+        <li onclick="location.href='/faq'">FAQ</li>
+    </ul>
+
+    <!-- company logo -->
+    <div class="logo" onclick="location.reload()">
+        <img src="/images/logo.png" alt="logo">
+        <p>shot<span style="color: #4A3AFF;">maniacs</span></p>
+    </div>
+
+    <!-- login button -->
+    <button type="button" class="btn login-btn" onclick="location.assign('/login')">Login</button>
+
+    <!-- profile overview -->
+    <div class="profile" onclick="location.assign('/profile')">
+        <img src="/images/penguin.png" alt="profile photo">
+        <div class="profile-details">
+            <h4 id="fullname">John Smith (CREW)</h4>
+            <p id="email">john.smith@gmail.com</p>
+        </div>
+    </div>
+
+</header>
+
+<div class="strape">
+
+    <!-- make booking -->
+    <div class="col booking">
+        <h1>Are you looking for a photographer or video maker for you event?</h1>
+        <h1>You found what you were looking for</h1>
+        <button type="submit" class="btn" onclick="toggleBookingPopup()">Make booking</button>
+    </div>
+
+    <!-- image grid -->
+    <div class="col img-grid">
+        <div class="img-row-1">
+            <img class="photo" src="/images/concert1.jpg" alt="Concert photo 1">
+        </div>
+        <div class="img-row-2">
+            <img class="photo" src="/images/wedding.jpg" alt="Wedding photo">
+            <img class="photo" src="/images/concert2.jpg" alt="Concert photo 2">
+        </div>
+    </div>
+
+</div>
+
+<div class="strape">
+
+    <!-- image of the girl taking pics -->
+    <div class="full-photo">
+        <img src="/images/girl_taking_pics.jpeg" alt="Girl taking photos">
+    </div>
+
+    <!-- info about services -->
+    <div class="col services">
+        <h2>Our services</h2>
+        <p>Shotmaniacs has many professionals in three main fields:</p>
+        <h3>1. Photography</h3>
+        <p class="shift">We can make terrific pictures for a photo album or
+            your social media. Collect your memories in photos!</p>
+        <h3>2. Video making</h3>
+        <p class="shift">Are you planning any celebration?
+            We can film your wedding/graduation and send it to you!</p>
+        <h3>3. Marketing</h3>
+        <p class="shift">Do you have some materials to promote?
+            Our experts use various modern technologies for marketing!</p>
+    </div>
+
+</div>
+
+
+<!-- image slides -->
+<div class="portfolio">
+    <h2>Portfolio</h2>
+    <p style="margin-bottom: 5rem">Some of our works are depicted here:</p>
+
+
+    <div class="display-area cards-wrapper">
+        <div class="card"><img src="/images/concert1.jpg" alt=""></div>
+        <div class="card"><img src="/images/concert2.jpg" alt=""></div>
+        <div class="card"><img src="https://picsum.photos/200?random=3" alt=""></div>
+        <div class="card"><img src="https://picsum.photos/200?random=4" alt=""></div>
+
+        <div class="card"><img src="https://picsum.photos/200?random=5" alt=""></div>
+        <div class="card"><img src="https://picsum.photos/200?random=6" alt=""></div>
+        <div class="card"><img src="https://picsum.photos/200?random=7" alt=""></div>
+        <div class="card"><img src="https://picsum.photos/200?random=8" alt=""></div>
+
+        <div class="card"><img src="https://picsum.photos/200?random=9" alt=""></div>
+        <div class="card"><img src="https://picsum.photos/200?random=10" alt=""></div>
+        <div class="card"><img src="https://picsum.photos/200?random=11" alt=""></div>
+        <div class="card"><img src="https://picsum.photos/200?random=12" alt=""></div>
+
+        <div class="card"><img src="https://picsum.photos/200?random=13" alt=""></div>
+        <div class="card"><img src="https://picsum.photos/200?random=14" alt=""></div>
+        <div class="card"><img src="https://picsum.photos/200?random=15" alt=""></div>
+        <div class="card"><img src="https://picsum.photos/200?random=16" alt=""></div>
+    </div>
+
+<!--    &lt;!&ndash; dots to navigate between images &ndash;&gt;-->
+<!--    <div class="dots-wrapper">-->
+<!--        <button class="dot active"></button>-->
+<!--        <button class="dot"></button>-->
+<!--        <button class="dot"></button>-->
+<!--        <button class="dot"></button>-->
+<!--    </div>-->
+</div>
+
+<!-- page footer -->
+<footer>
+    <div class="footer-row">
+
+        <!-- additional -->
+        <div>
+            <h4>Additional</h4>
+            <ul>
+                <li><a href="/privacy">Privacy policy</a></li>
+                <li><a href="/tos">Terms of Use</a></li>
+            </ul>
+        </div>
+
+        <!-- contact us -->
+        <div>
+            <h4>Contact us</h4>
+            <ul>
+                <li><a href="tel:0645678763">Phone: <span style="color: blue; opacity: 100%;">
+                                &emsp;&emsp;0645678763</span></a></li>
+                <li><a href="mailto:hi@shotmaniacs.com">Mail: <span style="color: blue; opacity: 100%;">
+                                &emsp;&emsp;&emsp;hi@shotmaniacs.com</span></a></li>
+            </ul>
+        </div>
+
+        <!-- social media -->
+        <div>
+            <h4>Social media</h4>
+            <ul class="social-media-list">
+                <li><a href="https://www.facebook.com/Shotmaniacs/">
+                    <img src="/images/Socials/FB.svg" alt="Facebook" title="Facebook"></a></li>
+                <li><a href="https://www.instagram.com/Shotmaniacs/">
+                    <img src="/images/Socials/Insta.svg" alt="Instagram" title="Instagram"></a></li>
+            </ul>
+        </div>
+
+    </div>
+    <hr>
+    <p class="copyright">© 2022 Shotmaniacs | All Rights Reserved</p>
+</footer>
+
+<!-- pop-up to make a booking -->
+<div class="booking-popup" id="booking-popup">
+
+    <div class="event-data">
+        <div>
+            <h3>Event Title</h3>
+            <input type="text" id="event-name" placeholder="Enter a title">
+
+            <h3>Event Location</h3>
+            <input type="text" id="event-location" placeholder="Enter a location">
+
+            <h3>Event Type</h3>
+            <div class="select-box" id="type-select-box">
+                <div class="options-wrapper" id="type-options-wrapper">
+                    <div class="option">
+                        <input type="radio" class="radio" id="wedding" name="type">
+                        <label class="depart-label" for="wedding">Wedding</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" class="radio" id="business" name="type">
+                        <label class="depart-label" for="business">Business</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" class="radio" id="club" name="type">
+                        <label class="depart-label" for="club">Club</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" class="radio" id="festival" name="type">
+                        <label class="depart-label" for="festival">Festival</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" class="radio" id="commercial" name="type">
+                        <label class="depart-label" for="commercial">Commercial</label>
+                    </div>
+                </div>
+                <div class="selected" id="type-selected">Choose a type</div>
+            </div>
+
+            <h3>Phone number</h3>
+            <input type="tel" id="phone" name="phone" placeholder="Enter a phone number">
+        </div>
+
+        <div>
+            <button type="button" class="close-btn" onclick="toggleBookingPopup()"></button>
+
+            <h3>Start Date</h3>
+            <section class="date-section">
+                <input id="startDate" type="date" min="2022-06-29" max="2040-01-01">
+                <input id="startTime" type="time">
+            </section>
+
+            <h3>End Date</h3>
+            <section class="date-section">
+                <input id="endDate" type="date" min="2022-06-29" max="2040-01-01">
+                <input id="endTime" type="time">
+            </section>
+
+            <div style="margin-right: 6rem">
+                <h3>Event Duration</h3>
+                <input type="number" id="event-duration" name="duration" min="1" max="24"
+                       placeholder="Enter duration in hours">
+            </div>
+
+            <div style="margin-right: 6rem">
+                <h3>Notes</h3>
+                <textarea id="event-notes" name="notes" rows="4" cols="50" placeholder="Any comments?"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="booking-options"></div>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,183 @@
+input, textarea {
+    color: #6F6C90;
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 1.6rem;
+    box-shadow: 0px 2px 6px rgba(19, 18, 66, 0.07);
+    border: 1px solid #EFF0F7;
+    border-radius: 5rem;
+    padding: 1.5rem 3rem !important;
+    width: 100%;
+}
+
+input[type=time] {
+    width: 26rem;
+}
+
+input[type=radio] {
+    width: fit-content;
+}
+
+textarea {
+    max-width: 100%;
+    min-height: 10rem;
+}
+
+.booking-popup {
+    display: none;
+    flex-direction: column;
+    box-shadow: 5px 5px 16px 8px rgba(8, 15, 52, 0.12);
+    transition: transform 0.4s, top 0.4s;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    background: #FFFFFF;
+    border-radius: 5rem;
+    padding: 4rem 10rem 3rem 10rem;
+    z-index: 10;
+    width: 70%;
+    top: 50%;
+    left: 50%;
+    gap: 3rem;
+}
+
+.open-booking-popup {
+    visibility: visible;
+}
+
+.booking-popup h3 {
+    font-size: 1.8rem;
+    color: #170F49;
+    padding: 2.5rem 0 1rem 0;
+}
+
+.booking-popup .btn {
+    min-width: 20rem;
+}
+
+.event-data {
+    display: flex;
+    gap: 6%;
+}
+
+.event-data > *{
+    flex: 1;
+}
+
+.booking-options {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 2rem;
+}
+
+.date-section {
+    display: flex;
+    gap: 2rem;
+}
+
+.close-btn {
+    position: absolute;
+    background: url("/images/close.png") no-repeat;
+    background-size: 1.5rem;
+    cursor: pointer;
+    border: none;
+    width: 2rem;
+    height: 2rem;
+    right: 4rem;
+    top: 3.5rem;
+}
+
+/* event type dropdown */
+.dropdown-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* selected item in a dropdown menu */
+.select-box {
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+}
+
+.select-box label {
+    padding: 1.2rem 2.4rem;
+    cursor: pointer;
+}
+
+.selected {
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 2px 6px rgba(19, 18, 66, 0.07);
+    font-family: 'DM Sans', sans-serif !important;
+    border-radius: 5rem;
+    border: 1px solid #EFF0F7;
+    padding: 1.5rem 3rem;
+    color: #6F6C90;
+    position: relative;
+    cursor: pointer;
+    font-size: 1.6rem;
+}
+
+.selected::after {
+    content: "";
+    background: url("/images/arrow-down.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    transition: all 0.4s;
+    height: 100%;
+    width: 3.2rem;
+    right: 2rem;
+    top: 1rem;
+}
+
+/* dropdown options */
+.options-wrapper {
+    position: absolute;
+    z-index: 1;
+    margin-top: 7rem;
+    background-color: white;
+    box-shadow: var(--big-shadow);
+    width: 38%;
+    max-height: 0;
+    transition: all 0.4s;
+    font-size: 1.6rem;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    order: 1;
+}
+
+.options-wrapper.active {
+    padding: 1rem 0;
+    max-height: 22.5rem;
+    overflow-y: scroll;
+}
+
+.options-wrapper.active+.selected::after {
+    opacity: 0;
+}
+
+.options-wrapper::-webkit-scrollbar {
+    width: 0.8rem;
+    border-radius: 0 0.8rem 0.8rem 0;
+}
+
+.options-wrapper::-webkit-scrollbar-thumb {
+    background: #bbb;
+    border-radius: 0 0.8rem 0.8rem 0;
+}
+
+.option {
+    text-decoration: none;
+    padding: 1rem 0;
+    margin-left: -2rem;
+    cursor: pointer;
+}
+
+.option:hover {
+    background: #eee;
+}

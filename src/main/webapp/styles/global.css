@@ -1,0 +1,251 @@
+/**
+    =================================
+                 GLOBAL
+    =================================
+ */
+
+.questions{
+    font-family: 'DM Sans', serif !important;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.questions1{
+    font-family: 'DM Sans', serif;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+:root {
+    --regular-text: #6F6C90;
+    --red-btn: #FF0000;
+    --second-color: #4A3AFF;
+    --or-line: #EFF0F7;
+
+    --big-shadow: 5px 5px 16px #080F341F;
+    --small-shadow: 5px 5px 12px rgba(121, 125, 143, 0.122);
+    --small-border: 1px solid rgba(121, 125, 143, 0.122);
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+h1 {
+    font-size: 5.5rem;
+    line-height: 5.5rem;
+}
+
+h2 {
+    font-size: 5rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 3.6rem;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: white url('/images/blob-background.png') no-repeat fixed;
+    background-size: cover;
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 1.6rem;
+    height: 100%;
+}
+
+/* Removes default margin and define font */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+button,
+dl,
+label,
+dd {
+    margin: 0;
+    font-family: 'DM Sans', sans-serif !important;
+}
+
+/**
+    =================================
+               COMPONENTS
+    =================================
+ */
+
+.btn {
+    background: var(--second-color) !important;
+    border: 4px solid var(--second-color) !important;
+    box-shadow: var(--big-shadow);
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    padding: 0.6em 2.4em;
+    border-radius: 4em;
+}
+
+.btn:hover {
+    background: white !important;
+    color: black;
+}
+
+.btn:active {
+    color: white !important;
+}
+
+.cancel {
+    background: var(--red-btn) !important;
+    border: 4px solid var(--red-btn) !important;
+}
+
+/**
+    =================================
+                 HEADER
+    =================================
+ */
+
+header {
+    display: flex;
+    justify-content: center;
+    background: white;
+    border: 1px solid #ddd;
+    align-items: center;
+    min-height: 10.6rem;
+}
+
+/* navigation for index pages */
+.nav {
+    display: flex;
+    margin-right: auto;
+    padding-left: 5rem;
+    gap: 2rem;
+}
+
+.nav li {
+    color: black;
+    font-size: 2.4rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.nav li:hover {
+    color: var(--second-color);
+}
+
+.logo {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+/* company logo */
+.logo img {
+    height: 6rem;
+}
+
+.logo p {
+    font-weight: bold;
+    font-size: 5rem;
+    color: black;
+}
+
+.login-btn {
+    display: none;
+    margin-right: 4rem;
+    margin-left: auto;
+}
+
+.add-event-btn{
+    margin-left: 4rem;
+    margin-right: auto;
+}
+
+/* profile overview */
+.profile {
+    display: none;
+    align-items: center;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.profile img {
+    width: 6rem;
+    height: 6rem;
+    margin-right: 2rem;
+}
+
+.profile-details {
+    margin-right: 3rem;
+}
+
+/**
+    =================================
+                 FOOTER
+    =================================
+ */
+
+footer {
+    background: white;
+    margin-top: auto;
+}
+
+footer hr {
+    width: 80%;
+
+}
+
+footer li {
+    padding-top: 0.5rem;
+}
+
+footer a {
+    color: #ccc;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #ddd;
+    padding: 4rem 0 2rem 0;
+    gap: 10vw;
+}
+
+.copyright {
+    margin: 1.2rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+ul.social-media-list li {
+    display: inline-block;
+}
+
+ul.social-media-list img {
+    height: 2.8rem;
+    width: 2.8rem;
+    padding: 5px;
+}

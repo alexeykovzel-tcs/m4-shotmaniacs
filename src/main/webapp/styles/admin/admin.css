@@ -1,0 +1,84 @@
+body {
+    overflow-x: hidden;
+}
+
+/* ===================================
+*              COMPONENTS
+*  =================================== */
+
+.panel {
+    background-color: #fff;
+    box-shadow: var(--big-shadow);
+    border: var(--small-border);
+    border-radius: 4rem;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* ===================================
+*                HEADER
+*  =================================== */
+
+header {
+    flex-direction: column;
+    border: none;
+    min-height: 12.4rem;
+    box-shadow: var(--big-shadow);
+    background: white;
+}
+
+.sidebar {
+    display: flex;
+    justify-content: center;
+    gap: 6vw;
+}
+
+.sidebar a {
+    float: left;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.6rem;
+    margin: 1.5rem 0;
+}
+
+.sidebar a:hover {
+    background-color: white;
+    color: var(--second-color);
+}
+
+.sidebar a.active {
+    background-color: white;
+    color: var(--second-color);
+}
+
+.logo {
+    margin: 0 auto;
+    height: 6rem;
+    position: relative;
+}
+
+.logo-holder {
+    display: flex;
+    position: relative !important;
+}
+
+.company-name {
+    font-weight: bold;
+    font-size: 4rem;
+}
+
+.company-name-second {
+    color: var(--second-color);
+}

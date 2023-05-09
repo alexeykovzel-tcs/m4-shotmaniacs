@@ -1,0 +1,87 @@
+.icon {
+    border: none;
+    background: white no-repeat;
+    background-size: contain;
+    height: 5rem;
+    width: 5rem;
+}
+
+button {
+    background-color: white !important;
+}
+
+button:focus {
+    outline: solid var(--second-color);
+}
+
+.btn-info {
+    background-image: url("/images/info_icon.png");
+}
+
+.btn-approve {
+    background-image: url("/images/approve_event.png");
+    width: 5.5rem;
+}
+
+.btn-refuse {
+    background-image: url("/images/refuse_event.png");
+}
+
+.event-box {
+    display: flex;
+    align-items: center;
+    background: white;
+    box-shadow: var(--big-shadow);
+    margin: 3rem 12% 0 12%;
+    border-radius: 34px;
+    padding: 3rem 2rem;
+}
+
+.event-details {
+    margin-right: auto;
+    padding: 0 1rem 0 5rem;
+}
+
+.event-options {
+    display: flex;
+    gap: 1.5rem;
+    margin-right: 5rem;
+}
+
+.event-title {
+    font-weight: bold;
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+}
+
+.event-desc {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 1.6rem;
+}
+
+.event-desc p {
+    padding-right: 1rem;
+}
+
+.event-desc p:not(:last-child) {
+    border-right: 1px solid #bbb;
+}
+
+.hint {
+    color: #444;
+    margin-left: 7rem;
+    padding: 4rem 0 3rem 12vw;
+}
+
+@media screen and (max-width: 48rem) {
+    .event-box {
+        flex-direction: column;
+    }
+
+    .event-options {
+        margin: auto;
+        margin-top: 4rem;
+    }
+}
